@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Search Dropdown</title>
+</head>
+<body>
+  <main class="container">
+    <div class="search-container">
+      <div class="search-box">
+        <i class="search-icon bordr">
+          <img src="images/search-icon.svg" alt="search-icon" width="25">
+        </i>
+        <input type="text" placeholder="Search jobs by keyword">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li>
+            <span id="selected-job">All jobs</span>
+            <i class="dropdown-icon" >
+              <img src="images/arrow-down.svg" alt="">
+            </i>
+            <div class="dropdown-container">
+              <div class="dropdown">
+                <p class="title">All Jobs</p>  
+                <ul id="job">
+                  <li>Frontend Developer</li>
+                  <li>Backend Developer</li>
+                  <li>Consultant</li>
+                  <li>Project Manager</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li id="countries">
+            <span id="selected-location">Location</span>
+            <i class="dropdown-icon">
+              <img src="images/arrow-down.svg" alt="">
+            </i>     
+            <div class="dropdown-container">    
+              <div class="dropdown">
+                <p class="title">Location</p>  
+                <label for="country">Country</label>
+                <select name="country" id="country" onchange="onSelectCountry(this)">
+                  <option value="">Select country</option>
+                </select>
+                <label for="City">City</label>
+                <select name="city" id="city" onchange="onSelectCity(this)">
+                  <option value="">Select City</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span id="selected-field">All fields</span>
+            <i class="dropdown-icon">
+              <img src="images/arrow-down.svg" alt="">
+            </i>            
+            <div class="dropdown-container">
+              <div class="dropdown">
+                <p class="title">All Fields</p>  
+                <ul id="field">
+                  <li>Engineering</li>
+                  <li>Accountancy</li>
+                  <li>Education</li>
+                  <li>Design</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+  <script src="./scripts.js"></script>
+</body>
+</html>
