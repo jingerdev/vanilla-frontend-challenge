@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #FBF4E4;
+  font-size: 16px;
+  color: #35447C;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1057px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFFAF1;
+  border-radius: 45px;
+  box-shadow: 0 17px 42px #F3D7BE99;
+}
+
+li {
+  list-style: none;
+}
+
+nav > ul {
+  display: inline-flex;
+}
+
+nav > ul > li {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px 15px 0;
+  border: 1px solid #FFFAF1;  
+}
+
+nav > ul > li:hover {
+  border: 1px solid #FCE2C2;
+  background-color: #fff;
+}
+
+nav > ul > li:hover .dropdown-container {
+  display: block;
+}
+
+nav li li {
+  font-size: 18px;
+  padding: 10px;
+}
+
+nav li li:hover {
+  color: #FCE2C2;
+}
+
+nav li {
+  position: relative; 
+}
+
+.dropdown-container {
+  position: absolute;
+  display: none;
+  left: auto;
+  right: 0;
+  margin-top: 20px;
+  padding-top: 20px;
+  z-index: 9;
+}
+
+.dropdown {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 267px;
+  box-shadow: 0 17px 42px #F3D7BE99;
+}
+
+.dropdown .title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #35447C;
+  margin-left: 5px;
+  font-size: 1.1em;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.search-box input::placeholder {
+  color: #35447C
+}
+
+select {
+  margin: 10px 0;
+  display: block;
+  font-size: 18px;
+  border: 1px solid #FCE2C2;
+  border-radius: 22px;
+  padding: 8px;
+  width: 100%;
+  appearance: none;
+  background-image: url('./images/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 5px top 5px;
+  color: #35447C;
+}
+
+option {
+  color: #35447C;
+}
+
+
+/* Media query */
+
+@media screen and (max-width: 800px) {
+  .search-container {
+    display: block;
+  }
+  
+  .search-box {
+    margin-bottom: 20px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dropdown-container {
+    left: auto;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .menu {
+    display: block;
+  }
+  .menu li {
+    margin: 20px 0;
+  }
+}
