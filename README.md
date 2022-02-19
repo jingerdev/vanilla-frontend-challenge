@@ -6,7 +6,7 @@ Vanilla Frontend Challenge is a weekly challenge to build UI components with HTM
 
 Every week, I'm going to build a UI component without using any frameworks or libraries like Tailwindcss, Bootstrap, Jquery or React.
 
-It's all pure HTML, CSS and Javascript. Just plain old Vanilla! (Some people who love vanilla might not like the implication. ✌️✌️✌️!)
+It's all pure HTML, CSS and Javascript. Just plain old vanilla! (Some people who love vanilla flavor might not like the implication. ✌️✌️✌️!)
 
 ### Why I'm doing this?
 
@@ -51,6 +51,7 @@ These are some of the sites that inspired me to do this challenge:
 - http://frontendmentor.com/
 - https://www.hackerrank.com/
 - https://piccalil.li/category/front-end-challenges-club/
+- https://jenniferdewalt.com/
 
 
 ### Take the challenge with me!

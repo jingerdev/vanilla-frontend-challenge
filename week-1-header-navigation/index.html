@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Header Navigation</title>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <i id="menu-icon" onclick="showMenu()"><img src="images/menu.svg" height="40"/></i>
+      <ul id="menu-items">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Locations</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <div class="input-container">
+        <input
+          placeholder="Enter target location"
+        />
+        <i class="icon">
+          <img src="images/plane.svg" alt="icon" height="26">
+        </i>
+      </div>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
