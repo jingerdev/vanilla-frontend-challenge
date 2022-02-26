@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">
+  <title>Settings Card - Vanilla Frontend Challenge</title>
+</head>
+<body>  
+  <div class="container">
+    <div class="card-container">
+      <div class="card">
+        <header class="header">
+          <p class="title">Settings</p>
+        </header>
+        <section class="main-settings">
+          <ul>
+            <li>
+              <p>Dark mode</p>          
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            </li>
+            <li>
+              <p>Desktop notifications</p>          
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </li>
+            <li>
+              <p>Focused inbox</p>          
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </section>
+        <section class="sub-setting">
+          <h2 class="subtitle">Conversation view</h2>   
+          <ul>
+            <li>
+              <input type="radio" checked id="convo-view-1" name="convo-view" value="Newest on top">
+              <label for="convo-view-1">Newest on top</label>
+            </li>
+            <li>                
+              <input type="radio" id="convo-view-2" name="convo-view" value="Newest on bottom">
+              <label for="convo-view-2">Newest on bottom</label>
+            </li>
+            <li>                
+              <input type="radio" id="convo-view-3" name="convo-view" value="Off">
+              <label for="convo-view-3">Off</label>
+            </li>
+          </ul>   
+        </section>
+        <section class="sub-setting">
+          <h2 class="subtitle">Reading panel</h2>
+          <ul>
+            <li>                
+              <input type="radio" checked id="reading-pannel-1" name="reading-pannel" value="Show on the right">
+              <label for="reading-pannel-1">Show on the right</label>
+            </li>
+            <li>              
+              <input type="radio" id="reading-pannel-2" name="reading-pannel" value="Show on the bottom">
+              <label for="reading-pannel-2">Show on the bottom</label>
+            </li>
+            <li>              
+              <input type="radio" id="reading-pannel-3" name="reading-pannel" value="Hide">
+              <label for="reading-pannel-3">Hide</label>
+            </li>
+          </ul>
+        </section>
+        <footer>            
+          <a href="#" class="link">View all settings</a>
+        </footer>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>
