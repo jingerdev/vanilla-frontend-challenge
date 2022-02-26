@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card-container">
+      <div class="shadow"></div>
+      <div class="card">
+        <header class="header">   
+          <div>          
+            <input class="title" value="Groceries" />
+          </div>
+          <div>
+            <img src="./images/ellipses.svg" class="ellipses" width="25"/>       
+            <ul class="options">
+              <li>
+                <img src="./images/delete.svg" alt="delele icon" />
+                <p onclick="clearList()">Clear this list</p>
+              </li>
+              <li>
+                <img src="./images/delete.svg" alt="delele icon" />
+                <p onclick="clearList('completed')">Clear completed</p>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <ul class="not-done items" id="items-list">
+          <li>
+            <div class="item">
+              <div class="round" onclick="onCompleteItem(this)">
+                <input type="checkbox"/>
+                <label></label>
+              </div>
+              <input value="Eggs" />
+            </div>
+            <img src="./images/close.svg" class="delete-btn" onclick="deleteItem(this)" />
+          </li>
+          <li>
+            <div class="item">
+              <div class="round" onclick="onCompleteItem(this)">
+                <input type="checkbox" />
+                <label></label>
+              </div>
+              <input value="Tomatoes" />
+            </div>
+            <img src="./images/close.svg" class="delete-btn"  onclick="deleteItem(this)" />
+          </li>
+          <li>
+            <div class="item">
+              <div class="round" onclick="onCompleteItem(this)">
+                <input type="checkbox"/>
+                <label></label>
+              </div>
+              <input value="Avocado" />
+            </div>
+            <img src="./images/close.svg" class="delete-btn" onclick="deleteItem(this)" />
+          </li>
+        </ul>
+        <div class="completed">
+          <p class="subtitle">Completed (<span id="completed-count">0</span>)</p>
+          <ul class="done items" id="completed-list">
+            <li>
+              <div class="item">
+                <div class="round" onclick="unCheckItem(this)">
+                  <input type="checkbox" checked />
+                  <label></label>
+                </div>
+                <p>Egg Noodles</p>
+              </div>
+              <img src="./images/close.svg" class="delete-btn" onclick="deleteItem(this)" />
+            </li>
+            <li>
+              <div class="item">
+                <div class="round" onclick="unCheckItem(this)">
+                  <input type="checkbox" checked />
+                  <label for="checkbox"></label>
+                </div>
+                <p>Orange juice</p>
+              </div>
+              <img src="./images/close.svg" class="delete-btn" onclick="deleteItem(this)" />
+            </li>
+            <li>
+              <div class="item">
+                <div class="round" onclick="unCheckItem(this)">
+                  <input type="checkbox" checked />
+                  <label for="checkbox"></label>
+                </div>
+                <p>Apples</p>
+              </div>
+              <img src="./images/close.svg" class="delete-btn" onclick="deleteItem(this)" />
+            </li>
+            <li>
+              <div class="item" >
+                <div class="round" onclick="unCheckItem(this)">
+                  <input type="checkbox" checked />
+                  <label for="checkbox"></label>
+                </div>
+                <p>Onions</p>
+              </div>
+              <img src="./images/close.svg" class="delete-btn"  onclick="deleteItem(this)"/>
+            </li>
+          </ul>
+        </div>
+        <footer class="footer">
+          <input placeholder="Add new item" class="input-item" id="new-item" />    
+          <button class="add-btn" onclick="onAddItem()">
+            <img src="./images/plus.svg" alt="plus button" width="30"/>
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+</html>
