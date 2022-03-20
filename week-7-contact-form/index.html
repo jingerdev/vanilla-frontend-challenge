@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form - Vanilla Frontend Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="close-btn">
+          <div class="img-container">
+            <img src="./images/close.png" alt="close-btn" />
+          </div>
+        </div>
+        <h3 class="title">Send Us a Message</h3>
+        <div class="inputs-container">
+          <input id="name" type="name" placeholder="Full name" />
+          <input id="email" type="email" placeholder="Your email" />
+          <div class="select-container">
+            <select name="category">
+              <option value="I want to post">I want to post</option>
+              <option value="Submit a bug">Submit a bug</option>
+              <option value="Just want to talk">Just want to talk</option>
+              <option value="Others">Others</option>
+              <span class="focus"></span>
+            </select>
+          </div>
+        </div>
+        <textarea
+          name="message"
+          id=""
+          rows="5"
+          placeholder="Your message goes here..."
+        ></textarea>
+        <button class="action-btn">Submit form</button>
+      </div>
+    </div>
+  </body>
+</html>
