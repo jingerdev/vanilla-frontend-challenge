@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Mulish:wght@100;300;400;500;600&display=swap');
+
+:root {
+  --main-font-color: #fff;
+  --border-color: #e6e6e6;
+  --secondary-color: #171F38;
+  --body-font: "Mulish", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --decor-color: #F572B0;
+  --card-bg: #171F38;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--main-font-color);
+  height: 100vh;
+  background-color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 30px;
+  background-image: url('images/blob-left-bottom.png'), url('./images/blob-left.png'), url('./images/right-circle.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 230px, 120px , 300px;
+  background-position: left 150px bottom 30px, left 20px bottom 300px, right bottom;
+}
+
+.brand {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding: 50px;
+  font-family: var(--secondary-font);
+}
+
+.container {
+  width: 90%;
+  padding: 20px;
+  background-color: #242E4CD9;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.card-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 35px;
+}
+
+.inputs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+input:not([type="file"]) ,
+textarea,
+select {
+  margin-bottom: 20px;
+  caret-color: var(--main-font-color);
+  color: var(--main-font-color);
+  outline-color: var(--decor-color);
+  outline: none;
+  background-color: none;
+  display: block;
+  width: 100%;
+  font-family: var(--body-font);
+  font-weight: 100;
+  font-size: 16px;
+  border: 1px solid #171F38;
+  padding: 15px;
+}
+
+.select-container {
+  position: relative;
+}
+
+label {
+  color: #97A5CE;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input:not([type="file"]) {
+  border-radius: 4px;
+  background: none;
+}
+
+input:not([type="file"]):focus,
+textarea:focus {
+  border: 1px solid var(--decor-color);
+}
+
+textarea {
+  border-radius: 4px;
+  padding: 10px;
+  background: none;
+  resize: none;
+}
+
+select {
+  font-family: var(--secondary-font);
+  color: var(--main-font-color);
+  background-color: transparent;
+  appearance: none;
+  background-image: url("./images/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px top 20px;
+  position: relative;
+}
+
+option {
+  background-color: #171F38;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+::placeholder {
+  font-family: var(--secondary-font);
+  color: #97A5CE80;
+}
+
+textarea::placeholder {
+  font-family: var(--body-font);
+}
+
+.action-btn {
+  color: #fff;
+  padding: 15px;
+  min-width: 300px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  font-family: var(--body-font);
+  font-size: 16px;
+  background-color: #F073C8;
+  background-image: linear-gradient(90deg, #F073C8, #FF6A95);
+}
+
+footer {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.upload-container {
+  display: flex;
+  color: #97A5CE;
+  justify-content: space-between;
+}
+
+.upload-container div {
+  width: 50%;
+}
+
+.upload-container label {
+  border: 1px solid var(--secondary-color);
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  color: #97A5CE;
+}
+
+.upload-container label {
+  padding: 10px;
+  text-align: center;
+  width: 180px;
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+input[type="file"]::file-selector-button::after {
+  content: "No file uploaded"
+}
+
+/* Date input  */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-text {
+  color: #97A5CE;
+}
+
+@media only screen and (max-width: 980px) {
+  .inputs-container {
+    display: block;
+  }
+
+  .action-btn {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .upload-container {
+    display: block;
+  }
+
+  body {
+    background-size: 100px;
+  }
+}
