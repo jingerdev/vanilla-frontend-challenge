@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Mulish:wght@100;300;400;500;600&display=swap');
 
 :root {
   --main-font-color: #fff;
@@ -24,28 +24,43 @@ body {
   font-weight: 500;
   font-size: 16px;
   padding: 30px;
+  background-image: url('images/blob-left-bottom.png'), url('./images/blob-left.png'), url('./images/right-circle.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 230px, 120px , 300px;
+  background-position: left 150px bottom 30px, left 20px bottom 300px, right bottom;
+}
+
+.brand {
+  text-align: center;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 50px;
+  font-family: var(--secondary-font);
 }
 
 .container {
-  max-width: 1024px;
-  background-color: #242E4C;
-  padding: 35px;
-  margin: 0 auto;
+  width: 90%;
+  padding: 20px;
+  background-color: #242E4CD9;
   border-radius: 10px;
+  margin: 0 auto;
+}
+
+.card-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 35px;
 }
 
 .inputs-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 30px;
 }
 
-input,
+input:not([type="file"]) ,
 textarea,
 select {
   margin-bottom: 20px;
@@ -56,40 +71,50 @@ select {
   background-color: none;
   display: block;
   width: 100%;
+  font-family: var(--body-font);
+  font-weight: 100;
+  font-size: 16px;
+  border: 1px solid #171F38;
+  padding: 15px;
 }
 
-input:focus,
-textarea:focus {
-  border: 1px solid var(--decor-color);
+.select-container {
+  position: relative;
 }
 
 label {
   color: #97A5CE;
+  font-weight: 500;
   display: block;
   margin-bottom: 10px;
 }
 
 input:not([type="file"]) {
-  padding: 10px;
   border-radius: 4px;
-  border: 2px solid #171F38;
   background: none;
+}
+
+input:not([type="file"]):focus,
+textarea:focus {
+  border: 1px solid var(--decor-color);
 }
 
 textarea {
   border-radius: 4px;
   padding: 10px;
   background: none;
-  border: 2px solid #171F38;
   resize: none;
 }
 
 select {
-  padding: 10px;
   font-family: var(--secondary-font);
-  border: 2px solid #171F38;
   color: var(--main-font-color);
-  background: none;
+  background-color: transparent;
+  appearance: none;
+  background-image: url("./images/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px top 20px;
+  position: relative;
 }
 
 option {
@@ -110,12 +135,15 @@ textarea::placeholder {
 
 .action-btn {
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px;
+  min-width: 300px;
   border: none;
   border-radius: 4px;
   width: 200px;
+  font-family: var(--body-font);
+  font-size: 16px;
   background-color: #F073C8;
-  background-color: linear-gradient(90deg, #F073C8, #FF6A95);
+  background-image: linear-gradient(90deg, #F073C8, #FF6A95);
 }
 
 footer {
@@ -126,6 +154,11 @@ footer {
 .upload-container {
   display: flex;
   color: #97A5CE;
+  justify-content: space-between;
+}
+
+.upload-container div {
+  width: 50%;
 }
 
 .upload-container label {
@@ -140,14 +173,52 @@ footer {
 }
 
 .upload-container label {
-  margin: 20px
+  padding: 10px;
+  text-align: center;
+  width: 180px;
 }
 
-
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   display: none;
 }
 
-input[type=file]::file-selector-button::after {
+input[type="file"]::file-selector-button::after {
   content: "No file uploaded"
+}
+
+/* Date input  */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-text {
+  color: #97A5CE;
+}
+
+@media only screen and (max-width: 980px) {
+  .inputs-container {
+    display: block;
+  }
+
+  .action-btn {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .upload-container {
+    display: block;
+  }
+
+  body {
+    background-size: 100px;
+  }
 }

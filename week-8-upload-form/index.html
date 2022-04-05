@@ -10,9 +10,11 @@
   <body>
     <div class="container">
       <div class="card-container">
+        <p class="brand">
+          <img src="./images/UIDesignDaily.svg"/>
+        </p>
         <h3 class="title">Upload Files</h3>
-        <div class="inputs-container">
-          
+        <div class="inputs-container">          
           <div>
             <label for="auth-key">Authorization key</label>
             <input id="auth-key" type="name" placeholder="Authorization key" />
@@ -37,9 +39,9 @@
             <label for="description">Description</label>
             <textarea name="description" placeholder="Description" id="" cols="30" rows="10"></textarea>
           </div>
-          
-          <div>              
-            <div>
+                    
+          <div>
+            <div class="select-container">
               <label for="software">Software</label>
               <select>
                 <option value="Sketch">Sketch</option>
@@ -51,7 +53,7 @@
               <div>
                 Thumbnail image
                 <label for="upload-image">Upload file</label>
-                <input type="file" name="" id="upload-image" hidden>
+                <input type="file" name="" id="upload-image">
               </div>
               <div>
                 Source file
@@ -63,7 +65,7 @@
         </div>
         <footer>            
           <button class="action-btn">Submit</button>
-        </footer>
+        </footer>      
       </div>
     </div>
   </body>
