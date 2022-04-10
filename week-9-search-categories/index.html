@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Search Categories - Vanilla Frontend Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="search-container">
+          <div class="search-box">
+            <i class="search-icon">
+              <img src="images/search.png" alt="search-icon" width="25">
+            </i>    
+            <input type="text" value="" placeholder="Search for a part-time job" onkeyup="search(this)">
+          </div>
+          <button>
+            <img src="./images/map.png" alt="">
+            <span>Use map</span>
+          </button>
+        </div>
+        <!-- cards -->
+        <div id="categories">
+        </div>
+        <div id="not-found">
+          <p>No category found.</p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
