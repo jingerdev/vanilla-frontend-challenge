@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Form - Vanilla Frontend Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <h1 class="title">Enter your password</h1>
+        <div class="user-container">
+          <img src="./images/avatar.png" alt="">
+          <div class="details">
+            <p class="account-type">Business Account</p>
+            <p class="account-name">Sarah Bills</p>
+          </div>
+        </div>
+
+        <label for="password">Password</label>
+        <div class="password-container">
+          <div class="password-input">
+            <i class="icon">
+              <img src="images/lock.png" alt="search-icon" width="23">
+            </i>    
+            <input type="password" name="password" id="password" value="password">
+          </div>
+          <i class="toggle-password">
+            <img src="./images/hidden.png" id="toggle-icon">
+          </i>
+        </div>
+
+        <div class="actions">
+          <div class="toggle">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <p>Stay signed in</p>
+          </div>
+          <button>Continue</button>
+        </div>
+        <a href="#" class="reset">Reset password</a>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
