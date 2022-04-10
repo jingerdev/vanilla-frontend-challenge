@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --main-font-color: #132B50;
+  --border-color: #e6e6e6;
+  --body-font: "Inter", sans-serif;
+  --secondary-color: #f6f7f8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--main-font-color);
+  height: 100vh;
+  background-color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+  height: 100vh;
+}
+
+.card-container {
+  width: 480px;
+  padding: 60px;
+  background-color: #fff;
+  box-shadow: 0 24px 35px -15px #645d982b;
+  border-radius: 24px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.details {
+  padding-left: 20px;
+}
+
+.account-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.account-type {
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.password-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+} 
+
+.password label {
+  display: block;
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
+.password-input {
+  border: 1px solid var(--violet);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  width: 90%;
+  border: 1px solid var(--main-font-color);
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.password-input input {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  color: var(--main-font-color);
+  margin-left: 4px;
+}
+
+.toggle-password {
+  cursor: pointer;
+}
+
+.toggle-icon {
+  margin-left: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.actions .toggle {
+  display: flex;
+  align-items: center;
+}
+
+.actions .toggle p {
+  margin-left: 4px;
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
+.actions button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--main-font-color);
+  color: #fff;
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #132B50E6;
+}
+
+.reset {
+  margin-top: 35px;
+  text-decoration: underline;
+  font-weight: 600;
+  text-underline-offset: 2px;
+  display: block;
+  color: var(--main-font-color);
+}
+
+
+/* Slider toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  margin: 2px
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid var(--main-font-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Circle */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  bottom: 6px;
+  background-color: var(--main-font-color);
+  border: 1px solid var(--main-font-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  background-color: var(--main-font-color);
+  border: 1px solid var(--main-font-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 420px) {
+  .actions {
+    display: block;
+  }
+
+  .actions button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
