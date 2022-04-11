@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form - Vanilla Frontend Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <p class="title">Share Document</p>
+        <div class="form">
+          <input id="link" type="text" value="https://drive.com/file/d/1V_5zPJDskasjkIIIlysNFXGhtlZ7EI2EcHLF/view?">
+          <button class="action-btn" onclick="copyText()">Copy link</button>
+        </div>
+        <p class="sub-heading">Permission</p>
+        <div class="options">
+          <img src="./images/lock.png" alt="" width="27">
+          <select name="privacy" id="">
+            <option value="Restricted">Restricted</option>
+            <option value="Public">Public</option>
+          </select>
+        </div>
+        <p class="info">
+          Only people you add can open this link
+        </p>
+        <a href="#">Send feedback</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

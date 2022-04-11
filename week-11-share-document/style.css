@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --main-font-color: #132A46;
+  --border-color: #BDE5C8;
+  --body-font: "Poppins", sans-serif;
+  --secondary-color: #E8F5F3;
+  --accent-color: #4E7D75;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--main-font-color);
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #3D9989, #5AB1E2);
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 70px 20px;
+}
+
+.card-container {
+  width: 940px;
+  padding: 60px;
+  background-color: #fff;
+  box-shadow: 0 14px 94px #13689585;
+  border-radius: 24px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sub-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.form {
+  background-color: var(--secondary-color);
+  padding: 50px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+input {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 8px;
+  width: 85%;
+  font-family: var(--body-font);
+}
+
+button {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-family: var(--body-font);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4E7D75E3;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  font-family: var(--body-font);
+  font-size: 16px;
+  background-image: url('./images/arrow-down.png');
+  background-size: 17px;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 120px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.info {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #5a6a7e;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--accent-color);
+  font-weight: 900;
+  margin-top: 40px;
+  display: block;
+}
+
+@media only screen and (max-width: 957px) {
+  input {
+    width: 100%;
+  }
+
+  button {
+    margin-left: 0;  
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .card-container {
+    padding: 40px;
+  }
+
+  .form {
+    padding: 30px;
+  }
+
+  button {
+    margin-left: 0;  
+    margin-top: 20px;
+  }
+}
