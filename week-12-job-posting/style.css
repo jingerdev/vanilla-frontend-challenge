@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --main-font-color: #281A51;
+  --body-font: "Poppins", sans-serif;
+  --bg-color: #f4f2fc;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--main-font-color);
+  height: 100vh;
+  background-color: var(--bg-color);
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 70px 20px;
+}
+
+.card-container {
+  width: 940px;
+  min-height: 464px;
+  padding: 100px;
+  background-color: #fff;
+  box-shadow: 0 14px 52px -20px #f4f2fc;
+  border-radius: 8px;
+}
+
+.description {
+  padding: 20px;
+  padding-left: 120px;
+  padding-right: 120px;
+  text-align: center;
+}
+
+.description p {
+  padding: 20px;
+}
+
+.action-btn {
+  background-color: #3457dc;
+  color: #fff;
+  margin-top: 30px;
+  padding: 14px 20px;
+  width: 50%;
+  border: none;
+  border-radius: 40px;
+  font-family: var(--body-font);
+  font-weight: 500;
+  justify-content: center;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.positions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.positions img {
+  height: 80px;
+  width: auto;
+}
+
+.positions .item-card {
+  border: 1px solid #e8ecf3;
+  padding: 20px;
+  border-radius: 5px;
+  width: 160p860}
+
+.positions .item-card:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* Media queries */
+@media only screen and (max-width: 860px) {
+  .card-container {
+    width: 100%;
+  }
+  
+  .description {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .positions img {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .positions {
+    display: block;
+  }
+
+  .positions .item-card {
+    margin: 10px;
+  }
+
+  .action-btn {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .card-container {
+    padding: 40px;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+
+  .description p {
+    padding: 20px 0;
+  }
+}
